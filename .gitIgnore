@@ -1,0 +1,76 @@
+# Node.js
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+pids/
+logs/
+results/
+.cache/
+bower_components/
+public/bower_components/
+
+# dotenv environment variables file
+.env
+
+# Testing
+coverage/
+
+# Output of npm pack
+*.tgz
+
+# Yarn
+yarn-error.log
+.pnp
+.pnp.js
+
+# Visual Studio Code
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+System Volume Information/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# ESLint
+.eslintcache
+
+# OS-generated files
+ehthumbs.db
+
+# WebStorm
+.idea/
+*.iml
+*.iws
+
+# SASS
+.sass-cache/
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
