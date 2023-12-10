@@ -4,7 +4,7 @@ const patientController = require('../controllers/patientController');
 
 // Routes
 router.post('/register', patientController.register);
-router.post('/:id/create_report', patientController.createReport);
-router.get('/:id/all_reports', patientController.getAllReports);
+router.post('/create_report/:id', patientController.createReport);
+router.get('/all_reports/:id', patientController.getAllReports);
 
 module.exports = router;
