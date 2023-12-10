@@ -1,5 +1,8 @@
 const Patient = require('../models/patientModel');
 const Report = require('../models/reportModel');
+const mongoose=require('mongoose');
+const {ObjectId}=require('mongodb');
+
 
 exports.register = async (req, res) => {
     try {
@@ -20,7 +23,7 @@ exports.createReport = async (req, res) => {
     try {
         const { id } = req.params;
         const { createdByDoctor, status } = req.body;
-        const report = new Report({ createdByDoctor, patient: id, status });
+        const report = new Report({ createdByDoctor:new ObjectId(createdByDoctor), patient:id, status });
         await report.save();
         res.status(201).json({ report });
     } catch (error) {
@@ -32,7 +35,7 @@ exports.createReport = async (req, res) => {
 exports.getAllReports = async (req, res) => {
     try {
         const { id } = req.params;
-        const reports = await Report.find({ patient: id }).sort({ date: 'asc' });
+        const reports = await Report.find({ patient:id }).sort({ date: 'asc' });
         res.json({ reports });
     } catch (error) {
         console.error(error);
